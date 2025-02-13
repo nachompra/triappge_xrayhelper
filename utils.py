@@ -6,7 +6,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from sklearn.utils.class_weight import compute_class_weight
 from tensorflow.keras import layers
-from PIL import Image  # Fixed import
+from PIL import Image 
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, roc_curve, auc, precision_recall_curve, average_precision_score

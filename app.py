@@ -18,15 +18,15 @@ if st.button('Predict'):
     if uploaded_files:
         target_array = preprocess_images_streamlit(uploaded_files)
 
-        # Cargar el modelo Keras (mejor que pickle)
+
         model_path = 'binary_model_v4_1_augmented_sobel.pkl'
         model = pickle.load(open(model_path, 'rb')) 
 
-        # Realizar predicción
+        # Predicción
         predictions = model.predict(target_array)
-        predicted_classes = (predictions > 0.5).astype(int)  # Para clasificación binaria
+        predicted_classes = (predictions > 0.5).astype(int)
 
-        # Mapear clases a etiquetas
+        # Mapeamos clases a etiquetas
         labels = {0: 'Non Fractured', 1: 'Fractured'}
         
         # Mostrar los resultados con las imágenes
